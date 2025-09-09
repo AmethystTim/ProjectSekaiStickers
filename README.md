@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<img src='./readme/miku.png' width=60%>
+<img src='./readme/miku.png' width=45%>
 
 <strong>在QQ平台快速创建你的PJSK表情贴纸！</strong>
 
