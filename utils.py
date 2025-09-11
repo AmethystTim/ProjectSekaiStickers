@@ -152,15 +152,15 @@ async def make_sticker(character_dir: str, text: str, index: int=1, font_size: i
             y_line = top_padding + i * (line_height + line_spacing)  # 顶部 padding + 行高
 
             character_name = character_dir.split('/')[-1] if not character_dir.endswith('/') else character_dir.split('/')[-2]
-            border_color = await get_character_color(character_name)
-            border_color = hex_to_rgb(border_color)
+            fill_color = await get_character_color(character_name)
+            fill_color = hex_to_rgb(fill_color)
             await draw_text_with_border(
                 text_draw, 
                 (x_line, y_line), 
                 line, 
                 font=font, 
-                fill=(255, 255, 255),                                       # 文字颜色
-                border_color=border_color,                                  # 描边颜色
+                fill=fill_color,                                       # 文字颜色
+                border_color=(255, 255, 255),                                  # 描边颜色
                 border_width=4                                              # 描边厚度
             )
 
